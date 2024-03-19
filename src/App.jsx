@@ -1,33 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.js'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Registro } from './components/Registro'
+import { Muro } from './components/Muro'
+import { Pelicula } from './components/Pelicula'
+import { RegistroPersonaje } from './components/registroPersonaje'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <nav className="navbar bg-dark border-bottom border-body"  data-bs-theme="dark">
+        <div className="container-fluid">
+          <span className="navbar-brand mb-0 h1">Api Personajes</span>
+        </div>
+      </nav>
+
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Registro/>} />
+        <Route path='/muro' element={<Muro />} />
+        <Route path='/pelicula' element={<Pelicula />} />
+        <Route path='/registroPersonaje' element={<RegistroPersonaje />} />
+      </Routes>
+      </BrowserRouter>
+
     </>
   )
 }
