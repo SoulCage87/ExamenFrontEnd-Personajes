@@ -7,6 +7,8 @@ import { Registro } from './components/Registro'
 import { Muro } from './components/Muro'
 import { Pelicula } from './components/Pelicula'
 import { RegistroPersonaje } from './components/registroPersonaje'
+import { EditPersonaje } from './components/EditPersonaje'
+
 
 
 function App() {
@@ -26,6 +28,7 @@ function App() {
         <Route path='/muro' element={<Muro />} />
         <Route path='/pelicula' element={<Pelicula />} />
         <Route path='/registroPersonaje' element={<RegistroPersonaje />} />
+        <Route path='/edit/:idPer' element={<EditPersonaje />} />
       </Routes>
       </BrowserRouter>
 
