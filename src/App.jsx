@@ -8,6 +8,7 @@ import { Muro } from './components/Muro'
 import { Pelicula } from './components/Pelicula'
 import { RegistroPersonaje } from './components/registroPersonaje'
 import { EditPersonaje } from './components/EditPersonaje'
+import { RegistrarPelicula } from './components/RegistrarPelicula'
 
 
 
@@ -29,6 +30,7 @@ function App() {
         <Route path='/pelicula' element={<Pelicula />} />
         <Route path='/registroPersonaje' element={<RegistroPersonaje />} />
         <Route path='/edit/:idPer' element={<EditPersonaje />} />
+        <Route path='/RegistroPelicula' element={<RegistrarPelicula />} />
       </Routes>
       </BrowserRouter>
 
