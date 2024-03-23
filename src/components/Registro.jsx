@@ -15,6 +15,8 @@ const [formPost, setFormPost] = useState({
     confirmacion_con: ''
 })
 
+
+
 const onChangeHandler = (event) => {
 
     const { name, value } = event.target;
@@ -51,7 +53,7 @@ const onSubmit = async (event) => {
     } catch (error) {
        console.log(error)
        let err = document.getElementById('error') 
-       err.innerHTML = `<p classname= "fs-5">Error al Registrarse</p>`
+       err.innerHTML = `<p classname= "fs-5">${error.response.data.mensaje}</p>`
     }
 
 }
@@ -76,11 +78,11 @@ const onSubmit = async (event) => {
                     </div>
                     <div className="input-group mb-3 mt-3">
                         <span className="input-group-text" id="inputGroup-sizing-default">Contraseña</span>
-                        <input type="text" className="form-control" name='contrasena'  onChange={onChangeHandler}/>
+                        <input type="password" className="form-control" name='contrasena'  onChange={onChangeHandler}/>
                     </div>
                     <div className="input-group mb-3 mt-3">
                         <span className="input-group-text" id="inputGroup-sizing-default">Confirmacion Contraseña</span>
-                        <input type="text" className="form-control" name='confirmacion_con'  onChange={onChangeHandler}/>
+                        <input type="password" className="form-control" name='confirmacion_con'  onChange={onChangeHandler}/>
                     </div>
                     <div className="text-center mb-3">
                     <button type="submit" className="btn btn-outline-primary">Registrate</button>

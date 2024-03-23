@@ -9,6 +9,7 @@ import { Pelicula } from './components/Pelicula'
 import { RegistroPersonaje } from './components/registroPersonaje'
 import { EditPersonaje } from './components/EditPersonaje'
 import { RegistrarPelicula } from './components/RegistrarPelicula'
+import { UpdateMovie } from './components/UpdateMovie'
 
 
 
@@ -31,6 +32,7 @@ function App() {
         <Route path='/registroPersonaje' element={<RegistroPersonaje />} />
         <Route path='/edit/:idPer' element={<EditPersonaje />} />
         <Route path='/RegistroPelicula' element={<RegistrarPelicula />} />
+        <Route path='/UpdateMovie/:idPel' element={<UpdateMovie />} />
       </Routes>
       </BrowserRouter>
 
